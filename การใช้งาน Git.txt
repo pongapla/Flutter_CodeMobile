@@ -1,0 +1,33 @@
+การใช้งาน git command
+git rm -r --cached. ลบทั้งหมด
+git rm --cached <file_name> ลบระบุไฟล์
+
+การสร้างไฟล์ 
+touch app.js
+touch index.html
+
+การเพิ่มไฟล์ใน git 
+git add . เพิ่มทุกไฟล์
+git add *.<name file> เพิ่มที่ละไฟล์
+
+ตรวจสถานะ
+git status
+
+เก็บประวัติการแก้ไขถาวร (Commit)
+ git commit -m "Log Message"
+Option
+ - m เป็นพารามิเตอร์สำหรับใส่ข้อความช่วยจำ (Log Message) เพื่ออธิบายการ commit แต่ละเวอร์ชั่น
+ - เมื่อ Commit ไปปแล้ว จะได้ SHA-1 Hash เป็น Commit ID (รหัสประจำเวอร์ชั่น)
+ (SHA-1 Hash=40 ตัวอักษร แต่ตอนอ้างอิงใช้แค่ 7 ตัวอักษรแรก)
+
+ดูประวัติการ Commit (log)
+โดยจะแสดง Commit ID,Message, ชื่อผู้เขียน, อีเมล,และเวลาที่ Commit
+ - git log
+ - git log --oneline-> แสดงแต่ละlog เหลือบรรทัดเดียว
+ - git log --graph -> แสดงเป็นเส้น Branch ให้ดูง่ายขึ้น
+
+Git Branching
+ การแสดงชื่อ Branch
+ git branch
+ การสลับและสร้าง Branch
+ git checkout -b <ชื่อ branch> (ห้ามตั้งชื่อเว้นวรรค)
